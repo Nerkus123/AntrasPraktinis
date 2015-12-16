@@ -27,17 +27,17 @@ public class Kreditai {
     double seimosFinansiniaiIsipareigojimai;
     double vaikuSkaiciusSeimoje;
     
-     public boolean ivestu_duomenu_patikra_vartojimas() {
+  public boolean ivestu_duomenu_patikra_bustas() {
         return vaikuSkaiciusSeimoje > 0 && vaikuSkaiciusSeimoje < 10 && seimosPajamosAtskaiciusMokescius > 0 
-                && seimosPajamosAtskaiciusMokescius < 10000 && seimosFinansiniaiIsipareigojimai > 0 
-                && seimosFinansiniaiIsipareigojimai < 5000 && paskolosSuma2 > 300 && paskolosSuma2 < 26000 && laikotarpis <= 5;
+        && seimosPajamosAtskaiciusMokescius < 10000 && seimosFinansiniaiIsipareigojimai > 0 
+        && seimosFinansiniaiIsipareigojimai < 5000 && paskolosSuma2 > 300 && paskolosSuma2 < 26000 && laikotarpis <= 5;
     }
-     
-     public boolean ivestu_duomenu_patikra_bustas() {
-        return vaikuSkaiciusSeimoje > 0 && vaikuSkaiciusSeimoje < 10 && seimosPajamosAtskaiciusMokescius > 0 
-                && seimosPajamosAtskaiciusMokescius < 30000 && seimosFinansiniaiIsipareigojimai > 0 
-                && seimosFinansiniaiIsipareigojimai < 15000 && laikotarpis < 40;
-     }
+ 
+    public boolean ivestu_duomenu_patikra_vartojimas() {
+       return vaikuSkaiciusSeimoje > 0 && vaikuSkaiciusSeimoje < 10 && seimosPajamosAtskaiciusMokescius > 0
+               && seimosPajamosAtskaiciusMokescius < 30000 && seimosFinansiniaiIsipareigojimai > 0 
+               && seimosFinansiniaiIsipareigojimai < 15000 && laikotarpis < 40;
+    }
     public double getPaskolosSuma() {
         return paskolosSuma;
     }
