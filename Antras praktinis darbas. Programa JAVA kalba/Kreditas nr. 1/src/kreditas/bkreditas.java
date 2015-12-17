@@ -22,7 +22,7 @@ public class bkreditas extends KreditasMain {
             if (pa <= 50) {
                 Ksum = this.kreditosuma(this.getK(), this.getL());
                 Vimk = imokosAp(Ksum, this.getL());
-                if (((Vimk / this.getA()) * 100) <= 40) {
+                if (this.suteikiamoKreditoPatikra(Vimk)) {
                     System.out.println("Kredita suteikti galima!" + " "
                             + "Viso grazinti reikes: " + Ksum + " "
                             + "Menesinio imoka bus: " + Vimk);

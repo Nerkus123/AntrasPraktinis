@@ -15,11 +15,11 @@ public class vkreditas extends KreditasMain {
         double Vimk, Ksum; //papildomi kintamieji, taip pat palukanu norma
 
         if (this.getIs() < 15000) {
-            if (this.getK() >= 300 && this.getK() <= 260000) {
+            if (arGalimaSuteiktiKredita()) {
                 if (this.getL() <= 5) {
                     Ksum = kreditosuma(this.getK(), this.getL());
                     Vimk = imokosAp(Ksum, this.getL());
-                    if (((Vimk / this.getA()) * 100) <= 40) {
+                    if (this.suteikiamoKreditoPatikra(Vimk)) {
                         System.out.println("Kreditu suteikti galima!" + " "
                                 + "Viso grazinti reikes: " + Ksum + " "
                                 + "Menesine imoka bus: " + Vimk);

@@ -58,4 +58,11 @@ public double getA() {
       public double imokosAp(double K, double l) {
         return k / (l * 12); // imokos apskaiciavimas
     }
-}
+      
+      public boolean suteikiamoKreditoPatikra(double number) {
+          return ((number/ this.getA()) *100)<=40;
+      }
+      public boolean arGalimaSuteiktiKredita() {
+          return this.getK() >= 300 && this.getK() <= 260000;
+      }
+}   
