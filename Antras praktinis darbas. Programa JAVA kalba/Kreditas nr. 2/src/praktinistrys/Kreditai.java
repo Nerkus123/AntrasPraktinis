@@ -26,6 +26,9 @@ public class Kreditai {
     double seimosPajamosAtskaiciusMokescius;
     double seimosFinansiniaiIsipareigojimai;
     double vaikuSkaiciusSeimoje;
+    
+    
+    
 
     public boolean ivestu_duomenu_patikra_bustas() {
         return vaikuSkaiciusSeimoje > 0 && vaikuSkaiciusSeimoje < 10 && seimosPajamosAtskaiciusMokescius > 0
@@ -39,6 +42,9 @@ public class Kreditai {
                 && seimosFinansiniaiIsipareigojimai < 15000 && laikotarpis < 40;
     }
     
+    
+    
+    
     public boolean sutartiesSudarymoMokestisAtsakymas_patikra(double number) {
         return sutartiesSudarymoMokestisAtsakymas < number;
     }
@@ -48,6 +54,9 @@ public class Kreditai {
     public boolean paskolos_suteikimo_patirka () {
         return kreditoMenesineImokaApskaiciavimas >= realiosMenesinesPajamos / 100 * 40;
     }
+    
+    
+    
     
     public double getPaskolosSuma() {
         return paskolosSuma;
