@@ -26,18 +26,29 @@ public class Kreditai {
     double seimosPajamosAtskaiciusMokescius;
     double seimosFinansiniaiIsipareigojimai;
     double vaikuSkaiciusSeimoje;
-    
-  public boolean ivestu_duomenu_patikra_bustas() {
-        return vaikuSkaiciusSeimoje > 0 && vaikuSkaiciusSeimoje < 10 && seimosPajamosAtskaiciusMokescius > 0 
-        && seimosPajamosAtskaiciusMokescius < 10000 && seimosFinansiniaiIsipareigojimai > 0 
-        && seimosFinansiniaiIsipareigojimai < 5000 && paskolosSuma2 > 300 && paskolosSuma2 < 26000 && laikotarpis <= 5;
+
+    public boolean ivestu_duomenu_patikra_bustas() {
+        return vaikuSkaiciusSeimoje > 0 && vaikuSkaiciusSeimoje < 10 && seimosPajamosAtskaiciusMokescius > 0
+                && seimosPajamosAtskaiciusMokescius < 10000 && seimosFinansiniaiIsipareigojimai > 0
+                && seimosFinansiniaiIsipareigojimai < 5000 && paskolosSuma2 > 300 && paskolosSuma2 < 26000 && laikotarpis <= 5;
     }
- 
+
     public boolean ivestu_duomenu_patikra_vartojimas() {
-       return vaikuSkaiciusSeimoje > 0 && vaikuSkaiciusSeimoje < 10 && seimosPajamosAtskaiciusMokescius > 0
-               && seimosPajamosAtskaiciusMokescius < 30000 && seimosFinansiniaiIsipareigojimai > 0 
-               && seimosFinansiniaiIsipareigojimai < 15000 && laikotarpis < 40;
+        return vaikuSkaiciusSeimoje > 0 && vaikuSkaiciusSeimoje < 10 && seimosPajamosAtskaiciusMokescius > 0
+                && seimosPajamosAtskaiciusMokescius < 30000 && seimosFinansiniaiIsipareigojimai > 0
+                && seimosFinansiniaiIsipareigojimai < 15000 && laikotarpis < 40;
     }
+    
+    public boolean sutartiesSudarymoMokestisAtsakymas_patikra(double number) {
+        return sutartiesSudarymoMokestisAtsakymas < number;
+    }
+    public boolean laikotarpio_patikra (int number) {
+        return laikotarpis > number;
+    }
+    public boolean paskolos_suteikimo_patirka () {
+        return kreditoMenesineImokaApskaiciavimas >= realiosMenesinesPajamos / 100 * 40;
+    }
+    
     public double getPaskolosSuma() {
         return paskolosSuma;
     }
